@@ -53,21 +53,6 @@ else
     echo " done"
 fi
 
-if test -d $bin_dir/auth0-$auth0_ver
-then
-    echo "-----> Using auth0 $auth0_ver"
-else
-    echo    "       First download, may take several minutes"
-    echo -n "-----> Installing nginx-jwt $auth0_ver..."
-    mkdir -p $bin_dir/auth0-$auth0_ver
-    cd $bin_dir/auth0-$auth0_ver
-    curl -sOL $auth0_url
-    tar vxf $auth0_file
-    rm -f $auth0_file
-    echo " done"
-fi
-
-
 cd $src_dir/openresty-$openresty_ver/
 ./configure --prefix=/ --with-pcre=$src_dir/pcre-$pcre_ver/ --with-http_ssl_module
 make
