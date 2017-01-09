@@ -13,6 +13,7 @@ parse_args $@
 set -u
 
 echo "$version" > env/OPENRESTY_VERSION
+echo "$OPENSHIFT_OPENRESTY_DIR""/nginx-jwt/v1.0.1" > env/OPENSHIFT_OPENRESTY_NGX_JWT
 
 
 for dir in logs run; do
