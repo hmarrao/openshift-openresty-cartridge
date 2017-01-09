@@ -7,7 +7,7 @@ A cartridge for openshift that enables OpenResty to be used as the web server.
 
 To install this cartridge use the cartridge reflector when creating an app
 
-	rhc create-app myapp http://cartreflect-claytondev.rhcloud.com/reflect?github=losinggeneration/openshift-openresty-cartridge
+	rhc create-app myapp http://cartreflect-claytondev.rhcloud.com/reflect?github=hmarrao/openshift-openresty-cartridge
 
 
 ### Configuration
