@@ -1,23 +1,23 @@
 Name: openresty
 Cartridge-Short-Name: OPENRESTY
 Display-Name: OpenResty
-Version: "1.5.8.1"
-Versions: ["1.5.8.1"]
-Website: https://github.com/losinggeneration/openshift-openresty-cart
+Version: "1.11.2.2"
+Versions: ["1.11.2.2"]
+Website: https://github.com/hmarrao/openshift-openresty-cart
 Cartridge-Version: 0.0.1
-Cartridge-Vendor: losinggeneration
+Cartridge-Vendor: hmarrao
 Categories:
   - service
   - nginx
   - openresty
   - web_framework
 Provides:
-  - nginx-1.5
+  - nginx-1.11
   - nginx
-  - nginx(version) = 1.5.8
+  - nginx(version) = 1.11.2
   - openresty-1.5
   - openresty
-  - openresty(version) = 1.5.8.1
+  - openresty(version) = 1.11.2.2
 Scaling:
   Min: 1
   Max: -1
@@ -41,8 +41,8 @@ Subscribes:
     Required: false
 Group-Overrides:
   - components:
-    - nginx-1.5
-    - openresty-1.5
+    - nginx-1.11
+    - openresty-1.11
     - web_proxy
 Endpoints:
   - Private-IP-Name:   IP
