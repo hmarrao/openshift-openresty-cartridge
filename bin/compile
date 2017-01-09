@@ -61,7 +61,7 @@ else
     echo -n "-----> Installing nginx-jwt $auth0_ver..."
     mkdir -p $bin_dir/auth0-$auth0_ver
     cd $bin_dir/auth0-$auth0_ver
-    curl -sO $auth0_url
+    curl -sOL $auth0_url
     tar vxf $auth0_file
     rm -f $auth0_file
     echo " done"
