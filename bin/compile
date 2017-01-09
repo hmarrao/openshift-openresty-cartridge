@@ -35,11 +35,11 @@ else
     echo " done"
 fi
 
-if test -d $src_dir/ngx_openresty-$openresty_ver
+if test -d $src_dir/openresty-$openresty_ver
 then
     echo "-----> Using OpenResty $openresty_ver"
 else
-    mkdir -p $src_dir/ngx_openresty-$openresty_ver
+    mkdir -p $src_dir/openresty-$openresty_ver
     cd $src_dir
     echo    "       First download, may take several minutes"
     echo -n "-----> Installing OpenResty $openresty_ver..."
