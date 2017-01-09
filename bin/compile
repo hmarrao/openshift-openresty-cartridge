@@ -12,13 +12,13 @@ bin_dir=$(cd "$1/out" && pwd)
 src_dir=$(cd "$1/src" && pwd)
 buildpack=$(dirname $(dirname $0))
 
-pcre_ver=${PCRE_VERSION:-8.33}
+pcre_ver=${PCRE_VERSION:-8.39}
 pcre_file=${PCRE_FILE:-pcre-$pcre_ver.tar.gz}
 pcre_url=${PCRE_URL:-http://sourceforge.net/projects/pcre/files/pcre/$pcre_ver/$pcre_file}
 
-openresty_ver=${OPENRESTY_VERSION:-1.5.8.1}
+openresty_ver=${OPENRESTY_VERSION:-1.11.2.2}
 openresty_file=${OPNERESTY_FILE:-ngx_openresty-$openresty_ver.tar.gz}
-openresty_url=${OPENRESTY_URL:-http://openresty.org/download/$openresty_file}
+openresty_url=${OPENRESTY_URL:-https://openresty.org/download/$openresty_file}
 
 
 if test -d $src_dir/pcre-$pcre_ver
