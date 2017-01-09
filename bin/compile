@@ -17,7 +17,7 @@ pcre_file=${PCRE_FILE:-pcre-$pcre_ver.tar.gz}
 pcre_url=${PCRE_URL:-http://sourceforge.net/projects/pcre/files/pcre/$pcre_ver/$pcre_file}
 
 openresty_ver=${OPENRESTY_VERSION:-1.11.2.2}
-openresty_file=${OPNERESTY_FILE:-ngx_openresty-$openresty_ver.tar.gz}
+openresty_file=${OPNERESTY_FILE:openresty-$openresty_ver.tar.gz}
 openresty_url=${OPENRESTY_URL:-https://openresty.org/download/$openresty_file}
 
 
@@ -50,7 +50,7 @@ else
 fi
 
 
-cd $src_dir/ngx_openresty-$openresty_ver/
+cd $src_dir/openresty-$openresty_ver/
 ./configure --prefix=/ --with-pcre=$src_dir/pcre-$pcre_ver/ --with-http_ssl_module
 make
 make DESTDIR=$bin_dir install
