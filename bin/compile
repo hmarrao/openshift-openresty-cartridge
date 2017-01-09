@@ -62,7 +62,7 @@ else
     mkdir -p $bin_dir/auth0-$auth0_ver
     cd $bin_dir/auth0-$auth0_ver
     curl -sO $auth0_url
-    tar zxf $auth0_file
+    tar vxf $auth0_file
     rm -f $auth0_file
     echo " done"
 fi
