@@ -65,6 +65,7 @@ else
     tar zxf $auth0_file
     rm -f $auth0_file
     echo " done"
+fi
 
 
 cd $src_dir/openresty-$openresty_ver/
