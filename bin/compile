@@ -21,7 +21,7 @@ openresty_file=${OPNERESTY_FILE:-openresty-$openresty_ver.tar.gz}
 openresty_url=${OPENRESTY_URL:-https://openresty.org/download/$openresty_file}
 
 auth0_ver=${OPENRESTY_AUTH0_VERSION:-v1.0.1}
-auth0_file=${OPENRESTY_AUTH0_FILE:nginx-jwt.tar.gz}
+auth0_file=${OPENRESTY_AUTH0_FILE:-nginx-jwt.tar.gz}
 auth0_url=${OPENRESTY_AUTH0_URL:-https://github.com/auth0/nginx-jwt/releases/download/$auth0_ver/$auth0_file}
 
 
@@ -53,14 +53,14 @@ else
     echo " done"
 fi
 
-if test -d $src_dir/auth0-$auth0_ver
+if test -d $bin_dir/auth0-$auth0_ver
 then
     echo "-----> Using auth0 $auth0_ver"
 else
     echo    "       First download, may take several minutes"
     echo -n "-----> Installing nginx-jwt $auth0_ver..."
-    mkdir -p $src_dir/auth0-$auth0_ver
-    cd $src_dir
+    mkdir -p $bin_dir/auth0-$auth0_ver
+    cd $bin_dir/auth0-$auth0_ver
     curl -sO $auth0_url
     tar zxf $auth0_file
     rm -f $auth0_file
