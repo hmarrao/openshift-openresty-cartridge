@@ -20,8 +20,6 @@ openresty_ver=${OPENRESTY_VERSION:-1.11.2.2}
 openresty_file=${OPNERESTY_FILE:openresty-$openresty_ver.tar.gz}
 openresty_url=${OPENRESTY_URL:-https://openresty.org/download/$openresty_file}
 
-https://github.com/auth0/nginx-jwt/releases/download/v1.0.1/nginx-jwt.tar.gz
-
 auth0_ver=${OPENRESTY_AUTH0_VERSION:-v1.0.1}
 auth0_file=${OPENRESTY_AUTH0_FILE:nginx-jwt.tar.gz}
 auth0_url=${OPENRESTY_AUTH0_URL:-https://github.com/auth0/nginx-jwt/releases/download/$auth0_ver/$auth0_file}
