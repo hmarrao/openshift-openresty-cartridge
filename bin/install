@@ -1,4 +1,2 @@
 #!/bin/bash
 #set -e
-
-$OPENSHIFT_OPENRESTY_DIR/bin/control update
