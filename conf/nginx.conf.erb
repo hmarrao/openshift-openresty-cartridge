@@ -12,6 +12,8 @@ http {
     include       mime.types;
     default_type  application/octet-stream;
 
+    lua_package_path "<%= ENV['OPENSHIFT_OPENRESTY_DIR'] %>";
+
     client_body_temp_path  <%= ENV['OPENSHIFT_TMP_DIR'] %>client_temp;
     proxy_temp_path        <%= ENV['OPENSHIFT_TMP_DIR'] %>proxy_temp;
     fastcgi_temp_path      <%= ENV['OPENSHIFT_TMP_DIR'] %>fastcgi_temp;
